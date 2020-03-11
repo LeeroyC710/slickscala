@@ -45,7 +45,8 @@ object Main extends App {
     val insertPeople = Future {
       val query = peopleTable ++= Seq(
         (10, "Jack", "Wood", 36),
-        (20, "Tim", "Brown", 24)
+        (20, "Tim", "Brown", 24),
+        (27, "Leeroy", "Tomas", 25)
       )
       // insert into `PEOPLE` (`PER_FNAME`,`PER_LNAME`,`PER_AGE`)  values (?,?,?)
       println(query.statements.head) // would print out the query one line up
